@@ -1,4 +1,6 @@
 package com.example.sd22332.util;
+import com.example.sd22332.model.Category;
+import com.example.sd22332.model.Drink;
 import org.hibernate.SessionFactory;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
@@ -22,6 +24,8 @@ public class HibernateConfig {
         properties.put(Environment.PASS, "Password.1");
         properties.put(Environment.SHOW_SQL, "true");
 
+        conf.addAnnotatedClass(Drink.class);
+        conf.addAnnotatedClass(Category.class);
         conf.setProperties(properties);
 
         ServiceRegistry registry = new StandardServiceRegistryBuilder()

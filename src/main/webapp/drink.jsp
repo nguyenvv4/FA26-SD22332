@@ -17,6 +17,12 @@
     <tr>
         <td>id</td>
         <td>name</td>
+        <td>price</td>
+        <td>image</td>
+        <td>description</td>
+        <td>Category</td>
+        <td>Category ID</td>
+        <td>active</td>
     </tr>
     </thead>
     <tbody>
@@ -25,6 +31,12 @@
         <tr>
             <td>${drink.id}</td>
             <td>${drink.name}</td>
+            <td>${drink.price}</td>
+            <td>${drink.image}</td>
+            <td>${drink.description}</td>
+            <td>${drink.category.name}</td>
+            <td>${drink.category.id}</td>
+            <td>${drink.active}</td>
         </tr>
     </c:forEach>
 
